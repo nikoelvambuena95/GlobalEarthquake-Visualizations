@@ -1,0 +1,14 @@
+{
+  "name": "@cincodenada/d3-versor-dragging",
+  "main": "ccf102eb2d6f02f7@255.js",
+  "version": "255.0.0",
+  "homepage": "https://observablehq.com/@cincodenada/d3-versor-dragging",
+  "author": {
+    "name": "Joel Bradshaw",
+    "url": "https://observablehq.com/@cincodenada"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
