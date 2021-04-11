@@ -4,17 +4,22 @@
     <meta charset="utf-8">
         <title>Down With Aaron</title>
         <link rel="stylesheet" type="text/css" href="./inspector.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     </head>
     <body>
-    <script type="module">
+        <div class="container">
+            <div class="row">
+            <script type="module">
 
-    import define from "./index.js";
-    import {Runtime, Library, Inspector} from "./runtime.js";
+            import define from "./index.js";
+            import {Runtime, Library, Inspector} from "./runtime.js";
 
-    const runtime = new Runtime();
-    const main = runtime.module(define, Inspector.into(document.body));
+            const runtime = new Runtime();
+            const main = runtime.module(define, Inspector.into(document.body));
 
-    </script>
+            </script>
+            </div>
+        </div>
     </body>
 
 </html>

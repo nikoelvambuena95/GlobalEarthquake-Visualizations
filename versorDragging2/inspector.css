@@ -50,7 +50,7 @@
                     .observablehq--inspect{
                         font:var(--mono_fonts);
                         overflow-x:auto;
-                        display:block;
+                        display:none;
                         white-space:pre}
                         .observablehq--error 
                         .observablehq--inspect{word-break:break-all;white-space:pre-wrap}
