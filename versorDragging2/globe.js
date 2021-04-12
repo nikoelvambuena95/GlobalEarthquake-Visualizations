@@ -14,7 +14,9 @@ DOM.element('div')
 )});
   main.variable(observer("svg")).define("svg", ["d3","DOM","width","height","drag","sphere","path","countries","status","names"], function(d3,DOM,width,height,drag,sphere,path,countries,status,names)
 {
+  // Gets height and width of screen from DOM
   const svg = d3.select(DOM.svg(width, height));
+
   svg.call(drag)
   
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
@@ -22,6 +24,9 @@ DOM.element('div')
   
   
   // Defines globe color attributes
+
+  var svgHeight=10
+  var svgWidth=10
 
   svg.append("path")
     .datum(sphere)
@@ -42,7 +47,7 @@ DOM.element('div')
       .attr("fill","none")
       .attr("stroke","#a8cfff")
     
-  // Define mouseover event for countries
+  // Defines mouseover event for countries
       country_map
     .on('mouseover', function(d){
       d3.select(this).style("fill", "#e44a6d")
@@ -58,7 +63,9 @@ DOM.element('div')
   return svg
 }
 );
-  main.variable(observer("names")).define("names", function()
+  
+// Define countries and associated country codes
+main.variable(observer("names")).define("names", function()
 { return {"242": "Fiji", "834": "Tanzania",
 "732": "Western Sahara",
 "124": "Canada",
