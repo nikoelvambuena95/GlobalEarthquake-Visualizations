@@ -20,10 +20,14 @@ DOM.element('div')
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
   function exit(d, i, nodes) { this.setAttribute('class','country'); }
   
+  
+  // Defines globe color attributes
+
   svg.append("path")
     .datum(sphere)
       .attr("d", path)
       .attr("fill","#a8cfff")
+      
   var country_map = svg.selectAll("path")
     .data(countries.features)
     .enter().append("path")
