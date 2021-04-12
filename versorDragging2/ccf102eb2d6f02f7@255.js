@@ -47,7 +47,9 @@ DOM.element('div')
       d3.select(this).style("fill", "#51a499")
     })
     .on('click', function(d, i, nodes) {
-      status.innerText = "You clicked " + names[d.id]
+      countryHeader=d3.select("#countryName").selectAll("h1")
+      countryHeader.text(d=>names[d.id])
+      // status.innerText = "You clicked " + names[d.id]
     })
   return svg
 }
