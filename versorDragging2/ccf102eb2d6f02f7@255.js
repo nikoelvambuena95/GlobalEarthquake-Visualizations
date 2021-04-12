@@ -1,11 +1,11 @@
 // https://observablehq.com/@cincodenada/d3-versor-dragging@255
 export default function define(runtime, observer) {
   const main = runtime.module();
-  main.variable(observer()).define(["md"], function(md){return(
-md`# D3 Versor Dragging
+//   main.variable(observer()).define(["md"], function(md){return(
+// md`# D3 Versor Dragging
 
-See also Jason Davies’ [Rotate the World](https://www.jasondavies.com/maps/rotate/).`
-)});
+// See also Jason Davies’ [Rotate the World](https://www.jasondavies.com/maps/rotate/).`
+// )});
   main.variable(observer("globe")).define("globe", ["svg"], function(svg){return(
 svg.node()
 )});
