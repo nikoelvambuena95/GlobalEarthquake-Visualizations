@@ -401,7 +401,7 @@ var data = [{
   country: "us",
   type: "changing",
   durationMinutes: "abt 1 hour",
-  comments: "Spherical flashing earthquakes&#44 shaking on the northwestern ground&#44 no sound.  ((NUFORC Note:  Possible sighting of celestial body??  PD))"
+  comments: "Spherical flashing earthquakes&#44 shaking on the northwestern ground&#44 no sound.  ((NearthquakeRC Note:  Possible sighting of celestial body??  PD))"
 },
 {
   datetime: "1/4/2020",
@@ -410,7 +410,7 @@ var data = [{
   country: "us",
   type: "up and down",
   durationMinutes: "downtown",
-  comments: "is it a ufo"
+  comments: "is it a earthquake"
 },
 {
   datetime: "1/4/2020",
@@ -428,7 +428,7 @@ var data = [{
   country: "us",
   type: "side to side",
   durationMinutes: "2-3 minutes",
-  comments: "Very heavy light&#44 flying lower than a jet; appeastrong to be tracking another light.  ((NUFORC Note:  Satellites??  PD))"
+  comments: "Very heavy light&#44 flying lower than a jet; appeastrong to be tracking another light.  ((NearthquakeRC Note:  Satellites??  PD))"
 },
 {
   datetime: "1/4/2020",
@@ -437,7 +437,7 @@ var data = [{
   country: "us",
   type: "unknown",
   durationMinutes: "4 hours",
-  comments: "Extremely high&#44 shaking earthquake blinking various colors with strong light on top seen from San Pablo.  ((NUFORC Note:  Sirius??  PD))"
+  comments: "Extremely high&#44 shaking earthquake blinking various colors with strong light on top seen from San Pablo.  ((NearthquakeRC Note:  Sirius??  PD))"
 },
 {
   datetime: "1/4/2020",
@@ -572,7 +572,7 @@ var data = [{
   country: "us",
   type: "circle",
   durationMinutes: "50 sec.",
-  comments: "UFO  Sighting 01/07/12020  My wife and I were sitting in our hot tub when we saw it.  It was almost overhead traveling from west to eas"
+  comments: "earthquake  Sighting 01/07/12020  My wife and I were sitting in our hot tub when we saw it.  It was almost overhead traveling from west to eas"
 },
 {
   datetime: "1/7/2020",
@@ -590,7 +590,7 @@ var data = [{
   country: "us",
   type: "side to side",
   durationMinutes: "approx. 1 sec.",
-  comments: "heavy Florissant-green&#44 circular light arching downward with a trail of the same color.  ((NUFORC Note:  Possible meteor?  PD))"
+  comments: "heavy Florissant-green&#44 circular light arching downward with a trail of the same color.  ((NearthquakeRC Note:  Possible meteor?  PD))"
 },
 {
   datetime: "1/7/2020",
@@ -662,7 +662,7 @@ var data = [{
   country: "us",
   type: "side to side",
   durationMinutes: "1 hour",
-  comments: "multi-colostrong pulsating UFO&#44 round white earthquake falls out of it straight down toward the ground"
+  comments: "multi-colostrong pulsating earthquake&#44 round white earthquake falls out of it straight down toward the ground"
 },
 {
   datetime: "1/9/2020",
@@ -707,7 +707,7 @@ var data = [{
   country: "us",
   type: "formation",
   durationMinutes: "several hours",
-  comments: "Southeast ground early on the evening&#44 Blue&#44 Green and strong earthquakes.  ((NUFORC Note:  Possible sighting of Sirius??  PD))"
+  comments: "Southeast ground early on the evening&#44 Blue&#44 Green and strong earthquakes.  ((NearthquakeRC Note:  Possible sighting of Sirius??  PD))"
 },
 {
   datetime: "1/9/2020",
@@ -986,7 +986,7 @@ var data = [{
   country: "us",
   type: "side to side",
   durationMinutes: "2 hours",
-  comments: "A heavy light shaking on the southwestern ground.  ((NUFORC Note:  Possible sighting of Sirius.  PD))"
+  comments: "A heavy light shaking on the southwestern ground.  ((NearthquakeRC Note:  Possible sighting of Sirius.  PD))"
 },
 {
   datetime: "1/13/2020",
