@@ -73,11 +73,21 @@
 .box{
     background-color: #3E5A84;
     height: 600px;
-    width: auto;
-    margin: 1%
+    width: 550px;
+    padding: 5%;
+    /* margin: 1% */
 }
 
-
+.space-box{
+    background-image: url("spaceBox.svg");
+    background-size: 600px 550px;
+    background-repeat: no-repeat;
+    height: 550px;
+    width:auto;
+    /* margin: 1%; */
+    /* background-color: #10a778; */
+    position: relative;
+}
 
 .center{
     text-align: center;
