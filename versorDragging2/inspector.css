@@ -72,9 +72,12 @@
 
 .box{
     background-color: #3E5A84;
-    height: 100px;
-    width: 100px;
+    height: 600px;
+    width: auto;
+    margin: 1%
 }
+
+
 
 .center{
     text-align: center;
