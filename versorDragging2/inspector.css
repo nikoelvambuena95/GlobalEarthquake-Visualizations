@@ -101,3 +101,8 @@
     text-align: center;
     margin: 50px;
 }
+
+#main-header{
+    font-family: 'Zen Dots';
+    font-size: 65px;
+}
