@@ -62,7 +62,7 @@ DOM.element('div')
       d3.select(this).style("fill", "#51a499")
     })
     .on('click', function(d, i, nodes) {
-      var countryHeader=d3.select("#countryName").selectAll("h1")
+      var countryHeader=d3.select("#countryName").selectAll("h2")
       countryHeader.text(`${names[d.id]}`)
       // status.innerText = "You clicked " + names[d.id]
     })
