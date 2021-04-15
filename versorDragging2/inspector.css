@@ -65,3 +65,18 @@
     background-attachment: fixed;
     background-size: cover;
 } */
+
+.powder-blue{
+    background-color: #d6e3ea;
+}
+
+.box{
+    background-color: #3E5A84;
+    height: 100px;
+    width: 100px;
+}
+
+.center{
+    text-align: center;
+    margin: 50px;
+}

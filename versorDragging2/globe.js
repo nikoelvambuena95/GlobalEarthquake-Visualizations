@@ -16,7 +16,6 @@ DOM.element('div')
 {
   // Gets height and width of screen from DOM
   const svg = d3.select(DOM.svg(width, height));
-
   svg.call(drag)
   
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
@@ -27,6 +26,7 @@ DOM.element('div')
 
   var svgHeight=10
   var svgWidth=10
+
 
   svg.append("path")
     .datum(sphere)
