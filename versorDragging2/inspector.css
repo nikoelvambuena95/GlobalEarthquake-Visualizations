@@ -89,6 +89,14 @@
     position: relative;
 }
 
+.country-box{
+    background-color: #ffbd39;
+    height: 50px;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+
 .center{
     text-align: center;
     margin: 50px;
