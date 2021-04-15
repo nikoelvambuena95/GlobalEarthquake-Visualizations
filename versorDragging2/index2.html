@@ -29,15 +29,15 @@
 
         <!-- View boxes -->
         <div class="row">
-            <div class="col-md-6 vertical-center">
+            <div class="col-md-6">
                 <div class="box">
-                    <div class="space-box justify-content-center">
+                    <div class="space-box">
 
                     </div>
 
                 </div>
             </div>
-            <div class="col-md-6 vertical-center">
+            <div class="col-md-6">
                 <div class="box"> 
                 </div>
             </div>
@@ -47,6 +47,16 @@
     </div>
 
     <!-- Scripts -->
+
+    <script type="module">
+
+        import define from "./index.js";
+        import {Runtime, Library, Inspector} from "./runtime.js";
+
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+
+        </script>
 
 
 
