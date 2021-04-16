@@ -55,9 +55,16 @@
                         .observablehq--error 
                         .observablehq--inspect{word-break:break-all;white-space:pre-wrap}
 
+
+
 .land:hover{
-    fill:crimson
+    fill:#d60038
+
 }
+/* .observablehq{
+    position: absolute;
+    z-index: 1;
+} */
 
 /* body{
     background: url('space3.svg') #FAF8E3;
@@ -75,17 +82,18 @@
     height: 600px;
     width: 550px;
     padding: 5%;
-    margin: 1%
+    margin: 1%;
+    z-index: -1;
 }
 
 .space-box{
-    background-image: url("spaceBox.png");
+    background-image: url("spaceBox.png"); 
     background-size: 600px 550px;
     background-repeat: no-repeat;
     height: 550px;
     width:auto;
-    /* margin: 1%; */
-    /* background-color: #10a778; */
+    margin: 1%;
+    background-color: #10a778;
     position: relative;
 }
 
@@ -105,4 +113,8 @@
 #main-header{
     font-family: 'Zen Dots';
     font-size: 65px;
+}
+
+#globe-here{
+    z-index: 1;
 }
