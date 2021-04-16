@@ -10,20 +10,19 @@ export default function define(runtime, observer) {
 svg.node()
 )});
   main.variable(observer("status")).define("status", ["DOM"], function(DOM){return(
-DOM.element('div')
+    DOM.element('div')
 )});
   main.variable(observer("svg"))
   .define("svg", ["d3","DOM","width","height","drag","sphere","path","countries","status","names"], 
   function(d3,DOM,width,height,drag,sphere,path,countries,status,names)
 {
 
-  // var canvas=d3.select("canvas")
-  //   canvasWidth=canvas.property("width")
-  //   canvasHeight=canvas.property("height")
-  //   canvasContext=canvas.node().getContext("2d")
-
   // Gets height and width of screen from DOM
   const svg = d3.select(DOM.svg(width, height));
+
+  // console.log(countries.features.forEach())
+
+  // var svg=d3.select(".space-box").selectAll("canvas")
   svg.call(drag)
   
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
@@ -37,6 +36,7 @@ DOM.element('div')
     .datum(sphere)
     .attr("d", path)
     .attr("fill","#a8cfff")
+    
       
   var country_map = svg.selectAll("path")
     .data(countries.features)
@@ -54,8 +54,7 @@ DOM.element('div')
     .attr("stroke","#a8cfff")
     
   // Defines mouseover event for countries
-      country_map
-    .on('mouseover', function(d){
+      country_map.on('mouseover', function(d){
       d3.select(this).style("fill", "#e44a6d")
     })
     .on('mouseout', function(d){
@@ -64,6 +63,7 @@ DOM.element('div')
     .on('click', function(d, i, nodes) {
       var countryHeader=d3.select("#countryName").selectAll("h2")
       countryHeader.text(`${names[d.id]}`)
+      console.log(d.id)
       // status.innerText = "You clicked " + names[d.id]
     })
   return svg
