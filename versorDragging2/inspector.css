@@ -65,3 +65,44 @@
     background-attachment: fixed;
     background-size: cover;
 } */
+
+.powder-blue{
+    background-color: #d6e3ea;
+}
+
+.box{
+    background-color: #3E5A84;
+    height: 600px;
+    width: 550px;
+    padding: 5%;
+    margin: 1%
+}
+
+.space-box{
+    background-image: url("spaceBox.png");
+    background-size: 600px 550px;
+    background-repeat: no-repeat;
+    height: 550px;
+    width:auto;
+    /* margin: 1%; */
+    /* background-color: #10a778; */
+    position: relative;
+}
+
+.country-box{
+    background-color: #ffbd39;
+    height: 50px;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+    margin: 50px;
+}
+
+#main-header{
+    font-family: 'Zen Dots';
+    font-size: 65px;
+}

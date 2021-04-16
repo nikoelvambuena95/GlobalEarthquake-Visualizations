@@ -12,40 +12,46 @@ svg.node()
   main.variable(observer("status")).define("status", ["DOM"], function(DOM){return(
 DOM.element('div')
 )});
-  main.variable(observer("svg")).define("svg", ["d3","DOM","width","height","drag","sphere","path","countries","status","names"], function(d3,DOM,width,height,drag,sphere,path,countries,status,names)
+  main.variable(observer("svg"))
+  .define("svg", ["d3","DOM","width","height","drag","sphere","path","countries","status","names"], 
+  function(d3,DOM,width,height,drag,sphere,path,countries,status,names)
 {
+
+  // var canvas=d3.select("canvas")
+  //   canvasWidth=canvas.property("width")
+  //   canvasHeight=canvas.property("height")
+  //   canvasContext=canvas.node().getContext("2d")
+
   // Gets height and width of screen from DOM
   const svg = d3.select(DOM.svg(width, height));
-
   svg.call(drag)
   
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
   function exit(d, i, nodes) { this.setAttribute('class','country'); }
   
-  
-  // Defines globe color attributes
 
-  var svgHeight=10
-  var svgWidth=10
+
+  // Defines globe color attributes
 
   svg.append("path")
     .datum(sphere)
-      .attr("d", path)
-      .attr("fill","#a8cfff")
+    .attr("d", path)
+    .attr("fill","#a8cfff")
       
   var country_map = svg.selectAll("path")
     .data(countries.features)
-    .enter().append("path")
-      .attr("d", path)
-      .attr("fill", "#51a499")
-      .attr("stroke", "#fff")
-      .attr("class", "country")
+    .enter()
+    .append("path")
+    .attr("d", path)
+    .attr("fill", "#51a499")
+    .attr("stroke", "#fff")
+    .attr("class", "country")
 
   svg.append("path")
     .datum(sphere)
-      .attr("d", path)
-      .attr("fill","none")
-      .attr("stroke","#a8cfff")
+    .attr("d", path)
+    .attr("fill","none")
+    .attr("stroke","#a8cfff")
     
   // Defines mouseover event for countries
       country_map
@@ -56,8 +62,8 @@ DOM.element('div')
       d3.select(this).style("fill", "#51a499")
     })
     .on('click', function(d, i, nodes) {
-      countryHeader=d3.select("#countryName").selectAll("h1")
-      countryHeader.text(d=>names[d.id])
+      var countryHeader=d3.select("#countryName").selectAll("h2")
+      countryHeader.text(`${names[d.id]}`)
       // status.innerText = "You clicked " + names[d.id]
     })
   return svg
