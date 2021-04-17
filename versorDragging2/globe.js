@@ -1,4 +1,7 @@
 // https://observablehq.com/@cincodenada/d3-versor-dragging@255
+// import {Runtime, Inspector} from "@observablehq/runtime";
+// // import define from "@cincodenada/d3-versor-dragging";
+
 export default function define(runtime, observer) {
   const main = runtime.module();
 //   main.variable(observer()).define(["md"], function(md){return(
@@ -17,12 +20,15 @@ svg.node()
   function(d3,DOM,width,height,drag,sphere,path,countries,status,names)
 {
 
+    var spaceBox=d3.select(".space-box").selectAll(".globe-here")
   // Gets height and width of screen from DOM
-  const svg = d3.select(DOM.svg(width, height));
+    const svg = d3.select(DOM.svg(width, height));
 
-  // console.log(countries.features.forEach())
+  // var svg=d3.select(".space-box").selectAll(".globe-here").append(svg)
+  
+    spaceBox.append(`<h1>Test</h1>`)
+  
 
-  // var svg=d3.select(".space-box").selectAll("canvas")
   svg.call(drag)
   
   function enter(d, i, nodes) { this.setAttribute('class','country active'); }
@@ -63,11 +69,14 @@ svg.node()
     .on('click', function(d, i, nodes) {
       var countryHeader=d3.select("#countryName").selectAll("h2")
       countryHeader.text(`${names[d.id]}`)
-      console.log(d.id)
+      var apiCall=d.id
       // status.innerText = "You clicked " + names[d.id]
     })
+
+   
   return svg
 }
+  
 );
   
 // Define countries and associated country codes

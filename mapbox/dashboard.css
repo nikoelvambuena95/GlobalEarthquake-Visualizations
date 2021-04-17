@@ -1,0 +1,31 @@
+/* remove default margin and padding from body */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* set map, body, and html to 100% of the screen size */
+#map,
+body,
+html {
+  height: 100%;
+}
+
+#main-header{
+  font-family: 'Zen Dots';
+  font-size: 65px;
+}
+
+.center{
+  text-align: center;
+  margin: 50px;
+}
+
+.box{
+  /* background-color: #3E5A84; */
+  height: 600px;
+  width: 550px;
+  padding: 5%;
+  margin: 1%;
+  z-index: -1;
+}

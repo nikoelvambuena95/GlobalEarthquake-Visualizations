@@ -78,7 +78,7 @@
 }
 
 .box{
-    background-color: #3E5A84;
+    /* background-color: #3E5A84; */
     height: 600px;
     width: 550px;
     padding: 5%;
@@ -87,13 +87,13 @@
 }
 
 .space-box{
-    background-image: url("spaceBox.png"); 
+    /* background-image: url("spaceBox.png");  */
     background-size: 600px 550px;
     background-repeat: no-repeat;
     height: 550px;
     width:auto;
     margin: 1%;
-    background-color: #10a778;
+    /* background-color: #10a778; */
     position: relative;
 }
 
@@ -116,5 +116,5 @@
 }
 
 #globe-here{
-    z-index: 1;
+    z-index: 5;
 }
