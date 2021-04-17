@@ -18,7 +18,6 @@
   <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="inspector.css">
 
   <!--D3 cdn-->
   <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -32,18 +31,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 id="main-header">Earthquake Locator</h1>
+        <h1 id="main-header" class="center">Earthquake Locator</h1>
     </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <ul>
-          <li>Continents</li>
-          <li>US</li>
-          <li>Asia</li>
-          <li>Africa</li>
-          <li>Europe</li>
-          <li>HElp</li>
+        <h3>Continents</h3>
+        <ul id="continents">
+          <li id="europe">Europe</li>
+          <li id="asia">Asia</li>
+          <li id="northAmerica">North America</li>
+          <li id="southAmerica">South America</li>
+          <li id="africa">Africa</li>
+          <li id="antarctica">Antarctica</li>
+          <li id="oceania">Oceania</li>
+        </ul>
           <br>
           <br>
           <br>
@@ -56,21 +58,23 @@
           <br>
           <br>
           <br>
-      </div>
+      
+    </div> 
       <div class="col-md-8">
         <div id="map"></div>
         <br>
       </div>
-     <div class="row">
-       <div class="col-md-4">
-         <h2 id="magnitude">Magnitude</h2>
+    </div>
+     <div id="metrics-row" class="row">
+       <div class="col-md-2">
+         <h2 id="magnitude">9.5</h2>
        </div>
-       <div class="col-md-4">
-        <h2 id="depth">Depth</h2>
-      </div>
-      <div class="col-md-4">
-        <h2 id="form">Wave Form</h2>
-      </div>
+       <div class="col-md-2">
+        <h2 id="depth">22.35ft</h2>
+        </div>
+        <div class="col-md-2">
+          <h2 id="form">S</h2>
+        </div>
        
      </div> 
 
@@ -78,9 +82,10 @@
   
   
   
-  <!-- <div id="map"></div> -->
-    
 
+  <!-- D3 link -->
+    
+  <script src="https://d3js.org/d3.v6.min.js"></script>
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="

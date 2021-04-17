@@ -14,6 +14,7 @@ html {
 #main-header{
   font-family: 'Zen Dots';
   font-size: 65px;
+  padding: 10px;
 }
 
 .center{
@@ -28,4 +29,17 @@ html {
   padding: 5%;
   margin: 1%;
   z-index: -1;
+}
+
+#metrics-row{
+  margin: 10px;
+  padding: 10px;
+
+}
+
+#continents{
+  cursor: pointer;
+}
+li:hover{
+  color:#D60038;
 }

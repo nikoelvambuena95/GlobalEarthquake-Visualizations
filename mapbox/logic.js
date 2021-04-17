@@ -4,8 +4,13 @@ var queryUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 // Perform a GET request to the query URL
 d3.json(queryUrl).then(function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
-  createFeatures(data.features);
+  createFeatures(data.features)
+  // for (var i=0;i<5;i++){
+  //   console.log(data.features[i].properties.mag)
+  // }
+  
 });
+
 
 //
 function createFeatures(earthquakeData) {
@@ -14,7 +19,8 @@ function createFeatures(earthquakeData) {
 //   // Give each feature a popup describing the place and time of the earthquake
   function onEachFeature(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.place +
-      "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
+      "</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
+      // console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`);
   }
 
   // Create a GeoJSON layer containing the features array on the earthquakeData object
@@ -26,6 +32,8 @@ function createFeatures(earthquakeData) {
   // Sending our earthquakes layer to the createMap function
   createMap(earthquakes);
 }
+
+
 
 function createMap(earthquakes) {
 
@@ -62,7 +70,7 @@ function createMap(earthquakes) {
     center: [
       37.09, -95.71
     ],
-    zoom: 5,
+    zoom: 3,
     layers: [streetmap, earthquakes]
   });
 
@@ -72,4 +80,44 @@ function createMap(earthquakes) {
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
   }).addTo(myMap);
+
+
+var continents={"Europe":[54.5260, 15.2551],
+        "Asia":[34.0479, 100.6197],
+        "North America":[54.5260, -105.2551],
+        "South America":[8.7832, -55.4915],
+        "Africa":[8.7832, 34.5085],
+        "Antarctica":[82.8628, 135.0000],
+        "Oceania":[22.7359, 140.0188]}
+
+// var center=[37.09, -95.71]
+d3.selectAll("#europe").on("click", function(){
+   var center=[54.5260, 15.25510]
+   myMap.setView(center)
+})
+d3.selectAll("#asia").on("click", function(){
+  center=[34.0479, 100.6197]
+  myMap.setView(center)
+})
+d3.selectAll("#northAmerica").on("click", function(){
+  center=[54.5260, -105.2551]
+  myMap.setView(center)
+})
+d3.selectAll("#southAmerica").on("click", function(){
+  center=[8.7832, -55.4915]
+  myMap.setView(center)
+})
+d3.selectAll("#africa").on("click", function(){
+  center=[8.7832, 34.5085]
+  myMap.setView(center)
+})
+d3.selectAll("#antarctica").on("click", function(){
+  center=[82.8628, 135.0000]
+  myMap.setView(center)
+})
+d3.selectAll("#oceania").on("click", function(){
+  center=[22.7359, 140.0188]
+  myMap.setView(center)
+})
+
 }
