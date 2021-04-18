@@ -31,6 +31,7 @@ function createFeatures(earthquakeData) {
       d3.select("#depth").text(`${depth}`)
       var waveForm=feature.properties.magType
       d3.select("#form").text(`${waveForm.toUpperCase()}`)
+
     })
     }
 

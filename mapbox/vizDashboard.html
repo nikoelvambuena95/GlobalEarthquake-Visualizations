@@ -4,6 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Quake the Shake</title>
+  <style>
+  #toggle {
+    width: 750px;
+    height: 100px;
+    background: #ccc;
+  }
+  </style>
+
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
@@ -13,6 +21,8 @@
   <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<!--  JQuery -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -30,6 +40,9 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="dashboard.css">
+ <!-- Shake Code -->
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -67,8 +80,9 @@
 
       </div>
       <div class="col-md-9">
-        <div id="map"></div>
-        <br>
+        <div id="toggle"></div>
+  <div id="map"></div>
+
       </div>
     </div>
     <div id="metrics-row" class="row">
@@ -133,6 +147,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="static/js/shake.js"></script>
 </body>
 
 </html>
