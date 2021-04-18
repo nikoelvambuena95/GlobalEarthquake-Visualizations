@@ -1,9 +1,10 @@
 d3.csv("UNCERF.csv").then(function(data){
     var countries=[]
     var dollars=[]
-    for (var i=0;i<6;i++){
+    for (var i=0;i<data.length;i++){
         var dollar=data[i]["Total Disaster Relief($)"]
-        dollar= parseInt(dollar)
+        dollar= parseInt(dollar.replace(/,/g, ""))
+        console.log(dollar)
         countries.push(data[i].Country)
         dollars.push(dollar)
         
@@ -12,6 +13,8 @@ d3.csv("UNCERF.csv").then(function(data){
 
 
 console.log(typeof dollars)
+console.log(dollars)
+
 
 
 var ctx = document.getElementById('myChart');
