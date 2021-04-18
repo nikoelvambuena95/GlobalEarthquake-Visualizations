@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Geo JSON</title>
+  <title>Quake the Shake</title>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orelega+One" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 
@@ -16,10 +19,12 @@
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />>
   <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Chart.js Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js"
+    integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw=="
+    crossorigin="anonymous"></script>
   <!--D3 cdn-->
   <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -33,7 +38,7 @@
     <div class="row">
       <div class="col-md-12">
         <h1 id="main-header" class="center">Earthquake Locator</h1>
-    </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-3">
@@ -47,46 +52,68 @@
           <!-- <li id="antarctica">Antarctica</li> -->
           <li id="oceania">Oceania</li>
         </ul>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-      
-    </div> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      </div>
       <div class="col-md-9">
         <div id="map"></div>
         <br>
       </div>
     </div>
-     <div id="metrics-row" class="row">
-       <div class="col-md-2">
-         <h2 id="magnitude">9.5</h2>
-       </div>
-       <div class="col-md-2">
-        <h2 id="depth">22.35ft</h2>
+    <div id="metrics-row" class="row">
+      <div class="col-md-2">
+        <div class="row">
+          <h1 id="magnitude" class="center left-padding">9.5</h1>
         </div>
-        <div class="col-md-2">
-          <h2 id="form">S</h2>
+        <div class="row">
+          <div class="metrics-box center">
+            <h3 class="center">Magnitude</h3>
+          </div>
         </div>
-       
-     </div> 
-     <canvas id="myChart" width="200" height="100"></canvas>
+      </div>
+      <div class="col-md-2">
+        <div class="row">
+          <h1 id="depth" class="center left-padding">22.35</h1>
+        </div>
+        <div class="row">
+          <div class="metrics-box center">
+            <h3 class="center">Depth</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="row">
+          <h1 id="form" class="center left-padding">S</h1>
+        </div>
+        <div class="row">
+          <div class="metrics-box center">
+            <h3 class="center">Wave Form</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <canvas id="myChart" width="200" height="100"></canvas>
 
   </div>
-  
-  
-  
+
+
+
   <script type="text/javascript" src="barChart.js"></script>
   <!-- D3 link -->
-    
+
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -97,7 +124,8 @@
   <!-- Our JS -->
   <script type="text/javascript" src="logic.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
