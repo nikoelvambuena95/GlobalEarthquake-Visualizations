@@ -14,7 +14,6 @@ d3.json(queryUrl).then(function(data) {
 
 
 
-
 //
 function createFeatures(earthquakeData) {
 //
@@ -23,8 +22,12 @@ function createFeatures(earthquakeData) {
   function onEachFeature(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
-      // console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`);
-  }
+    layer.on("click", function(){
+      console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`)
+     
+    })
+    }
+
 
   // Create a GeoJSON layer containing the features array on the earthquakeData object
   // Run the onEachFeature function once for each piece of data in the array
