@@ -5,12 +5,15 @@ var queryUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 d3.json(queryUrl).then(function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data.features)
-  // for (var i=0;i<5;i++){
-  //   console.log(data.features[i].properties)
-  // }
+  // var timeList=[]
+  // // console.log(data.features.length)
+  // for (var i=0;i<100;i++){
+  //   var timestamp=data.features[i].properties.time
+  //   timeList.push(timestamp)
+    
+  // }console.log(timeList)
   
 });
-
 
 
 //
@@ -22,7 +25,7 @@ function createFeatures(earthquakeData) {
     layer.bindPopup("<h3>" + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
     layer.on("click", function(){
-      console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`)
+      // console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`)
       d3.select("#magnitude").text(`${feature.properties.mag}`)
       var depth= Math.round(feature.properties.dmin*100)/100
       d3.select("#depth").text(`${depth}`)
