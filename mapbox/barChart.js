@@ -4,42 +4,46 @@ d3.csv("UNCERF.csv").then(function(data){
     for (var i=0;i<data.length;i++){
         var dollar=data[i]["Total Disaster Relief($)"]
         dollar= parseInt(dollar.replace(/,/g, ""))
-        console.log(dollar)
         countries.push(data[i].Country)
         dollars.push(dollar)
         
     }
     
 
-
-console.log(typeof dollars)
-console.log(dollars)
-
-
+    var topTenCountries=countries.slice(0, 20)
+    var topTenDollars=dollars.slice(0, 20)
+    var bottomTenCountries=countries.slice((countries.length-20), countries.length)
+    var bottomTenDollars=dollars.slice((dollars.length-20), dollars.length)
+    var countryList=topTenCountries.concat(bottomTenCountries)
+    var dollarList=topTenDollars.concat(bottomTenDollars)
 
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: countries,
+        labels: countryList,
         datasets: [{
-            label: '# of Votes',
-            data: dollars,
+            label: 'Total Relief Dollars',
+            data: dollarList,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                "#DFFF00",
+                "#FFBF00",
+                "#FF7F50",
+                "#DE3163",
+                "#9FE2BF",
+                "#40E0D0",
+                "#6495ED",
+                "#CCCCFF"
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                "#DFFF00",
+                "#FFBF00",
+                "#FF7F50",
+                "#DE3163",
+                "#9FE2BF",
+                "#40E0D0",
+                "#6495ED",
+                "#CCCCFF"
             ],
             borderWidth: 1
         }]
