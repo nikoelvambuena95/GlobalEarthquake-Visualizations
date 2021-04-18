@@ -24,7 +24,9 @@ function createFeatures(earthquakeData) {
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
     layer.on("click", function(){
       console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`)
-     
+      d3.select("#magnitude").text(`${feature.properties.mag}`)
+      d3.select("#depth").text(`${feature.properties.dmin}`)
+      d3.select("#form").text(`${feature.properties.magType}`).
     })
     }
 
