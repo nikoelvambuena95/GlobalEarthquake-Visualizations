@@ -101,10 +101,13 @@ var timeList=[
     1615136034190
 ]
 
+var minTime=Math.min.apply(Math, timeList)
+var minTimeUtc=new Date(minTime)
+console.log(minTimeUtc)
+
 var stringList=timeList.map(String)
-console.log(stringList)
 
-
+d3.timeParse("%B")
 
 var cal = new CalHeatMap();
 cal.init({
@@ -112,14 +115,12 @@ cal.init({
 	domain: "month",
 	subDomain: "x_day",
 	data: stringList,
-	start: new Date(2000, 0, 5),
+	start: minTimeUtc,
 	cellSize: 20,
 	cellPadding: 5,
 	domainGutter: 20,
 	range: 2,
 	domainDynamicDimension: false,
-	previousSelector: "#example-g-PreviousDomain-selector",
-	nextSelector: "#example-g-NextDomain-selector",
 	domainLabelFormat: function(date) {
 		moment.lang("en");
 		return moment(date).format("MMMM").toUpperCase();

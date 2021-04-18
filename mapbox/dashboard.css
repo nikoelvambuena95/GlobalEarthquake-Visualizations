@@ -44,6 +44,14 @@ html {
   /* z-index: -1; */
 }
 
+/* .bar-chart-box{
+  height: 50px;
+  width: 50px;
+  padding: 5%;
+  margin: 1%;
+  background-color: rgb(247, 226, 109);
+} */
+
 #metrics-row{
   margin: 30px;
   padding: 20px;
