@@ -5,11 +5,14 @@ var queryUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 d3.json(queryUrl).then(function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data.features)
-  // for (var i=0;i<5;i++){
+  // for (var i=0;i<data.length;i++){
+  //   var magnitude
   //   console.log(data.features[i].properties.mag)
   // }
   
 });
+
+
 
 
 //
