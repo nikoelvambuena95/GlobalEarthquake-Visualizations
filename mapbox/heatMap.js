@@ -140,6 +140,13 @@ var cal = new CalHeatMap();
 	cal.init({
         itemSelector:"#cal-heatmap",
         domain:"month",
-        range:2
+        range:2,
+        cellSize:20,
+        cellPadding:6,
+        verticalOrientation:true,
+        label:{
+            height:30,
+            align:"center"
+        }
 
     });
