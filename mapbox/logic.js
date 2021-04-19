@@ -31,7 +31,7 @@ function createFeatures(earthquakeData) {
       d3.select("#depth").text(`${depth}`)
       var waveForm=feature.properties.magType
       d3.select("#form").text(`${waveForm.toUpperCase()}`)
-
+      $( "#map" ).effect( "shake" )
     })
     }
 
@@ -94,6 +94,7 @@ function createMap(earthquakes) {
     collapsed: false
   }).addTo(myMap);
 
+time=d3.timeParse("%B")
 
 var continents={"Europe":[54.5260, 15.2551],
         "Asia":[34.0479, 100.6197],

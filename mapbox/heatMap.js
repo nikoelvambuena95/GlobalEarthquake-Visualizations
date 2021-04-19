@@ -1,15 +1,6 @@
-var timeList={timestamp: 1615161414137,
-    timestamp: 1615161400805,
-    timestamp: 1615161015300,
-    timestamp: 1615160712052,
-    timestamp: 1615160277400,
-    timestamp: 1615160023816,
-    timestamp: 1615159948424,
-    timestamp: 1615159842076,
-    timestamp: 1615159821360,
-    timestamp: 1615159181142,
-    timestamp: 1615158973140,
-    timestamp: 1615158823140}
+var timeList={timestamp: 1618843146,
+    timestamp2: 1618843117,
+    timestamp3: 1618695546}
 //     1615158579020,
 //     1615158093920,
 //     1615157500312,
@@ -103,10 +94,6 @@ var timeList={timestamp: 1615161414137,
 
 
 
-// var minTime=Math.min.apply(Math, timeList)
-// var minTimeUtc=new Date(minTime)
-
-
 
 
 // var maxTime=Math.max.apply(Math, timeList)
@@ -116,30 +103,12 @@ var timeList={timestamp: 1615161414137,
 // var stringList=timeList.map(String)
 
 
-// var cal = new CalHeatMap();
-// cal.init({
-// 	itemSelector: "#cal-heatmap",
-// 	domain: "month",
-// 	subDomain: "x_day",
-// 	data: timeList,
-// 	start: " March 1, 2021 @00:00",
-// 	cellSize: 20,
-// 	cellPadding: 5,
-// 	domainGutter: 20,
-// 	range: 2,
-// 	domainDynamicDimension: false,
-// 	domainLabelFormat: function(date) {
-// 		moment.lang("en");
-// 		return moment(date).format("MMMM").toUpperCase();
-// 	},
-// 	subDomainTextFormat: "%d",
-// 	legend: [20, 40, 60, 80]
-// });
 
 var cal = new CalHeatMap();
 	cal.init({
         itemSelector:"#cal-heatmap",
         domain:"month",
+        subDomain:"hour",
         range:2,
         cellSize:20,
         cellPadding:6,
@@ -147,6 +116,9 @@ var cal = new CalHeatMap();
         label:{
             height:30,
             align:"center"
-        }
+        }, 
+        data:timeList
+
+      
 
     });

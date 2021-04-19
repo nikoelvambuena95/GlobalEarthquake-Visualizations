@@ -1,6 +1,12 @@
-$( document ).click(function() {
-    $( "#map" ).effect( "shake" );
-  });
+var listItem=d3.select("ul").selectAll("li")
+
+listItem.on("click", function() {
+  $( "#map" ).effect( "shake" );
+})
+
+// $( document ).click(function() {
+//     $( "#map" ).effect( "shake" );
+//   });
 
 
 
