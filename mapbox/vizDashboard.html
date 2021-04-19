@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <title>Quake the Shake</title>
   <style>
-  #map {
-    width: 900px;
-    height: 100px;
-    background: #ccc;
-  }
+    #map {
+      width: 900px;
+      height: 100px;
+      background: #ccc;
+    }
   </style>
 
   <!-- fonts -->
@@ -17,11 +17,15 @@
   <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,600&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orelega+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orelega+One" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-<!--  JQuery -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">  <!--  JQuery -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Leaflet CSS -->
@@ -40,7 +44,7 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="dashboard.css">
- <!-- Shake Code -->
+  <!-- Shake Code -->
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
@@ -50,47 +54,49 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 id="main-header" class="center">Quake Locator</h1>
+        <h1 id="main-header">Quake Locator</h1>
+        <h1 id="main-header-back">Quake Locator</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
-        <h3>Continents</h3>
-       
-          <div class="continent-box hvr-grow">
-            <h3 id="europe">Europe</h3>
-          </div>
-          <div class="continent-box hvr-grow">
-            <h3 id="asia">Asia</h3>
-          </div>
-          <div class="continent-box hvr-grow">
-            <h3 id="northAmerica">North America</h3>
-          </div>
-          <div class="continent-box hvr-grow">
-            <h3 id="southAmerica">South America</h3>
-          </div>
-          <div class="continent-box hvr-grow">
-            <h3 id="africa">Africa</h3>
-          </div>
-          <div class="continent-box hvr-grow">
-            <h3 id="oceania">Oceania</h3>
-          </div>
-          <!-- <li id="europe">Europe</li>
+        <div class="continent-title-box">
+          <h3>Continents</h3>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="europe">Europe</h4>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="asia">Asia</h4>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="northAmerica">North America</h4>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="southAmerica">South America</h4>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="africa">Africa</h4>
+        </div>
+        <div class="continent-box hvr-grow">
+          <h4 id="oceania">Oceania</h4>
+        </div>
+        <!-- <li id="europe">Europe</li>
           <li id="asia">Asia</li>
           <li id="northAmerica">North America</li>
           <li id="southAmerica">South America</li>
           <li id="africa">Africa</li> -->
-          <!-- <li id="antarctica">Antarctica</li> -->
-          <!-- <li id="oceania">Oceania</li> -->
+        <!-- <li id="antarctica">Antarctica</li> -->
+        <!-- <li id="oceania">Oceania</li> -->
         <br>
         <br>
         <br>
-        
+
 
       </div>
       <div class="col-md-9">
         <div id="toggle"></div>
-  <div id="map"></div>
+        <div id="map"></div>
 
       </div>
     </div>
@@ -136,9 +142,9 @@
         <h2 class="center">Bottom 20 Countries</h2>
       </div>
     </div>
-    
+
     <canvas id="myChart" width="200" height="100"></canvas>
-  
+
   </div>
 
 

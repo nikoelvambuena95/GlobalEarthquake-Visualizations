@@ -12,9 +12,31 @@ html {
 }
 
 #main-header{
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 0.5%;
+  /* margin: 3%; */
   font-size: 65px;
-  padding: 10px;
+  margin-bottom: -80px;
+  /* padding: 10px; */
+  z-index: 5; 
+}
+
+#main-header-back{
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 65px;
+  z-index:-100;
+  /* padding-top: 0.5%; */
+  padding-right: 0.5%;
+  color:#F1AA86;
+  /* margin: 3%; */
+  /* z-index:-100;
+  padding-right: 0.5%;
+  color:#F1AA86;
+  position: absolute; */
 }
 
 .center{
@@ -74,6 +96,16 @@ li:hover{
   /* font-size: 5px; */
   text-align: center;
   background-color: #AFE1AF;
+  cursor:pointer;
+}
+
+.continent-title-box{
+  margin: 3%;
+  padding: 1%;
+  font-family: 'DM Serif Text';
+  /* font-size: 5px; */
+  text-align: center;
+  background-color: #f78b83;
   cursor:pointer;
 }
 

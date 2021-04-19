@@ -1,8 +1,8 @@
-var listItem=d3.select("ul").selectAll("li")
+// var listItem=d3.select("ul").selectAll("li")
 
-listItem.on("click", function() {
-  $( "#map" ).effect( "shake" );
-})
+// listItem.on("click", function() {
+//   $( "#map" ).effect( "shake" );
+// })
 
 // $( document ).click(function() {
 //     $( "#map" ).effect( "shake" );
