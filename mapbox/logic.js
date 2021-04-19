@@ -28,7 +28,7 @@ function createFeatures(earthquakeData) {
       // console.log(`Mag: ${feature.properties.mag} Depth: ${feature.properties.dmin} type:${feature.properties.magType}`)
       d3.select("#magnitude").text(`${feature.properties.mag}`)
       var depth= Math.round(feature.properties.dmin*100)/100
-      d3.select("#depth").text(`${depth}`)
+      d3.select("#depth").text(`${depth}ft`)
       var waveForm=feature.properties.magType
       d3.select("#form").text(`${waveForm.toUpperCase()}`)
       $( "#map" ).effect( "shake" )
