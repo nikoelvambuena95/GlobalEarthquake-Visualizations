@@ -102,6 +102,25 @@ var timeList={timestamp: 1618843146,
 
 // var stringList=timeList.map(String)
 
+var parserData = function (data) {
+    var dataJSON = {};
+  
+    for(var i=0; i<data.length; i++) {
+      var date = new Date(data[i].date); // Date of activity 
+      var sec = date.getTime()/1000; // Convert to sec
+  
+      // Pair "Key-Value" for calendar data
+      if(dataJSON[sec]) {
+        dataJSON[sec]++;
+      } else {
+        dataJSON[sec] = 1;
+      }
+    }
+  
+    return dataJSON;
+  }
+
+  console.log(parserData(timeList))
 
 
 var cal = new CalHeatMap();
@@ -117,7 +136,8 @@ var cal = new CalHeatMap();
             height:30,
             align:"center"
         }, 
-        data:timeList
+        data:timeList,
+        afterLoadData:parserData
 
       
 

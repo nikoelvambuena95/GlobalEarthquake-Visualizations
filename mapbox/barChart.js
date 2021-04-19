@@ -23,7 +23,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: countryList,
         datasets: [{
-            // label: "Relief Dollars: Top 20 and Bottom 20 Countries",
+            label: "Disaster Relief Funds in Dollars",
             data: dollarList,
             backgroundColor: [
                 "#DFFF00",
