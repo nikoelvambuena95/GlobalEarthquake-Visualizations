@@ -15,11 +15,10 @@ html {
   font-family: 'Arvo', serif;
   font-weight: bold;
   font-style: italic;
-  padding-left: 0.5%;
-  /* margin: 3%; */
+  padding-right: 0.6%;
   font-size: 65px;
   margin-bottom: -80px;
-  /* padding: 10px; */
+  color: #C70039;
   z-index: 5; 
 }
 
@@ -29,14 +28,9 @@ html {
   font-style: italic;
   font-size: 65px;
   z-index:-100;
-  /* padding-top: 0.5%; */
-  padding-right: 0.5%;
-  color:#F1AA86;
-  /* margin: 3%; */
-  /* z-index:-100;
-  padding-right: 0.5%;
-  color:#F1AA86;
-  position: absolute; */
+  padding-left: 0.6%;
+  color:#f89571;
+  
 }
 
 .center{
