@@ -46,7 +46,7 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
         .on("click", function(){
         console.log(magnitude)
         d3.select("#magnitude").text(`${magnitude}`)
-          // var depth2= Math.round(depth*100)/100
+          var depth2= Math.round(depth*100)/100
           d3.select("#depth").text(`${depth}`)
           var waveForm=waveform
           d3.select("#form").text(`${waveForm.toUpperCase()}`)
@@ -54,7 +54,34 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
         }))
         
     }
-
+    d3.selectAll("#europe").on("click", function(){
+      var center=[54.5260, 15.25510]
+      myMap.setView(center, 3)
+   })
+   d3.selectAll("#asia").on("click", function(){
+     center=[34.0479, 100.6197]
+     myMap.setView(center, 3)
+   })
+   d3.selectAll("#northAmerica").on("click", function(){
+     center=[54.5260, -105.2551]
+     myMap.setView(center, 3)
+   })
+   d3.selectAll("#southAmerica").on("click", function(){
+     center=[8.7832, -55.4915]
+     myMap.setView(center, 3)
+   })
+   d3.selectAll("#africa").on("click", function(){
+     center=[8.7832, 34.5085]
+     myMap.setView(center, 3)
+   })
+   d3.selectAll("#antarctica").on("click", function(){
+     center=[82.8628, 135.0000]
+     myMap.setView(center, 3)
+   })
+   d3.selectAll("#oceania").on("click", function(){
+     center=[22.7359, 140.0188]
+     myMap.setView(center, 3)
+   })
 
 
   // Add our marker cluster layer to the map
