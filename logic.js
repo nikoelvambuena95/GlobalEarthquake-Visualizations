@@ -15,72 +15,45 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(myMap);
 
 d3.csv("Seismic_Data.csv").then(function(eqdata){
-  console.log(eqdata)
-  console.log(eqdata.Latitude)
-
-// })
-
-// Store API query variables
-// var baseURL = "https://data.cityofnewyork.us/resource/fhrw-4uyv.json?";
-// var date = "$where=created_date between'2016-01-01T00:00:00' and '2017-01-01T00:00:00'";
-// var complaint = "&complaint_type=Rodent";
-// var limit = "&$limit=10000";
-
-// Assemble API query URL
-// var url = baseURL + date + complaint + limit;
-
-// var baseUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson?";
-// var date = "$where=starttime=2021-03-01' and endtime='2021-03-08'";
-// var eventType ="&eventtype=earthquake";
-// var limit = "&limit=4000"
-
-// Assemble API query URL
-// var url = baseURL + date + complaint + limit;
-// var url = baseURL + date + eventType + limit;
-// var url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2021-03-01&endtime=2021-03-08&eventtype=earthquake&limit=4000";
-
-// d3.csv("Seismic_Data.csv").then(function(eqdata){
-//   console.log(eqdata)
-// })
-
-// Grab the data with d3
-// d3.json(url).then(function(response) {
-
-
   // Create a new marker cluster group
   var markers = L.markerClusterGroup();
 
   // Loop through data
   for (var i = 0; i < eqdata.length; i++) {
 
-    // Set the data location property to a variable
-    var location = eqdata[i].location;
+    var latitude=eqdata[i].Latitude
+    var longitude=eqdata[i].Longitude
+    var depth=eqdata[i].Depth
+    var magnitude=eqdata[i].Magnitude
+    var waveform=eqdata[i].Waveform
+    var place=eqdata[i].Place
+    var time=eqdata[i].Time
+    var type=eqdata[i].Type
 
-    // console.log(eqdata[i].Depth)
-    // console.log(eqdata[i].Magnitude)
-    // console.log(eqdata[i].Waveform)
+    // Set the data location property to a variable
+    
 
     // Check for location property
     // if (location) {
 
       // Add a new marker to the cluster group and bind a pop-up
-      markers.addLayer(L.marker([eqdata[i].Latitude, eqdata[i].Longitude])
-        .bindPopup(eqdata[i].descriptor));
-      markers.on("click", function(){
-        console.log(eqdata[i].Magnitude)
-        // d3.select("#magnitude").text(`${eqdata[i].Magnitude}`)
-          var depth= Math.round(feqdata[i].Depth*100)/100
-          console.log(depth)
-          // d3.select("#depth").text(`${depth}`)
-          var waveForm=eqdata[i].Waveform
-          // d3.select("#form").text(`${waveForm.toUpperCase()}`)
-          console.log(waveForm)
-          $( "#map" ).effect( "shake" )
-        })
+      markers.addLayer(L.marker([latitude, longitude])
+        .bindPopup(`<h3>${place}</h3><hr><p>${time}</p>`))
+      // markers.on("click", function(){
+      //   console.log(eqdata[i].Magnitude)
+      //   // d3.select("#magnitude").text(`${eqdata[i].Magnitude}`)
+      //     var depth= Math.round(feqdata[i].Depth*100)/100
+      //     console.log(depth)
+      //     // d3.select("#depth").text(`${depth}`)
+      //     var waveForm=eqdata[i].Waveform
+      //     // d3.select("#form").text(`${waveForm.toUpperCase()}`)
+      //     console.log(waveForm)
+      //     $( "#map" ).effect( "shake" )
+      //   })
         
-    // }
+    }
 
-  }
+
 
   // Add our marker cluster layer to the map
   myMap.addLayer(markers);
