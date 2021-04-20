@@ -17,8 +17,8 @@ d3.csv("UNCERF.csv").then(function(data){
     var countryList=topTenCountries.concat(bottomTenCountries)
     var dollarList=topTenDollars.concat(bottomTenDollars)
 
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
+var ctx1 = document.getElementById('myChart');
+var myChart = new Chart(ctx1, {
     type: 'bar',
     data: {
         labels: countryList,
@@ -56,5 +56,17 @@ var myChart = new Chart(ctx, {
         }
     }
 })
+var ctx2 = document.getElementById('myPieChart');
+var myChart2 = new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [10, 20, 30]
+        }]
+}
+})
 
 })
+
+
+

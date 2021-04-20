@@ -14,7 +14,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: API_KEY
 }).addTo(myMap);
 
-d3.csv("static/js/Seismic_Data.csv").then(function(eqdata){
+d3.csv("Seismic_Data.csv").then(function(eqdata){
   console.log(eqdata)
   console.log(eqdata.Latitude)
 
@@ -56,12 +56,28 @@ d3.csv("static/js/Seismic_Data.csv").then(function(eqdata){
     // Set the data location property to a variable
     var location = eqdata[i].location;
 
+    // console.log(eqdata[i].Depth)
+    // console.log(eqdata[i].Magnitude)
+    // console.log(eqdata[i].Waveform)
+
     // Check for location property
     // if (location) {
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([eqdata[i].Latitude, eqdata[i].Longitude])
         .bindPopup(eqdata[i].descriptor));
+      markers.on("click", function(){
+        console.log(eqdata[i].Magnitude)
+        // d3.select("#magnitude").text(`${eqdata[i].Magnitude}`)
+          var depth= Math.round(feqdata[i].Depth*100)/100
+          console.log(depth)
+          // d3.select("#depth").text(`${depth}`)
+          var waveForm=eqdata[i].Waveform
+          // d3.select("#form").text(`${waveForm.toUpperCase()}`)
+          console.log(waveForm)
+          $( "#map" ).effect( "shake" )
+        })
+        
     // }
 
   }

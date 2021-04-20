@@ -5,15 +5,13 @@ var queryUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 d3.json(queryUrl).then(function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data.features)
-  // var timeList=[]
-  // // console.log(data.features.length)
-  // for (var i=0;i<100;i++){
-  //   var timestamp=data.features[i].properties.time
-  //   timeList.push(timestamp)
-    
-  // }console.log(timeList)
+  // for (var i=0;i<data.features.length;i++){
+  //   console.log(data.features[i].properties.magType)
+  // }
+  
   
 });
+
 
 
 //
@@ -104,7 +102,6 @@ var continents={"Europe":[54.5260, 15.2551],
         "Antarctica":[82.8628, 135.0000],
         "Oceania":[22.7359, 140.0188]}
 
-// var center=[37.09, -95.71]
 d3.selectAll("#europe").on("click", function(){
    var center=[54.5260, 15.25510]
    myMap.setView(center)
