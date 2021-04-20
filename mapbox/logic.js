@@ -29,9 +29,13 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
     var place=eqdata[i].Place
     var time=eqdata[i].Time
     var type=eqdata[i].Type
+    
+    
 
     // Set the data location property to a variable
     
+    // var foromatTime=d3.parseTime("%B $d, %Y")
+    // console.log(formatTime(time))
 
     // Check for location property
     // if (location) {
@@ -41,12 +45,11 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
         .bindPopup(`<h3>${place}</h3><hr><p>${time}</p>`)
         .on("click", function(){
         console.log(magnitude)
-        // d3.select("#magnitude").text(`${eqdata[i].Magnitude}`)
-          var depth= Math.round(depth*100)/100
-          // d3.select("#depth").text(`${depth}`)
+        d3.select("#magnitude").text(`${magnitude}`)
+          // var depth2= Math.round(depth*100)/100
+          d3.select("#depth").text(`${depth}`)
           var waveForm=waveform
-          // d3.select("#form").text(`${waveForm.toUpperCase()}`)
-          console.log(waveForm)
+          d3.select("#form").text(`${waveForm.toUpperCase()}`)
           $( "#map" ).effect( "shake" )
         }))
         
