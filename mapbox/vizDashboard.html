@@ -4,13 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Quake the Shake</title>
-  <style>
-    #map {
-      width: 900px;
-      height: 100px;
-      background: #ccc;
-    }
-  </style>
+  
   <!-- Boostrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -148,18 +142,20 @@
       </div>
     </div>
 
-    <canvas id="myChart" width="200" height="100"></canvas>
+    <div><canvas id="myChart" width="200" height="100"></canvas></div>
 
     <!-- <div">
       <canvas id="myPieChart" width="20" height="10"></canvas>
     </div> -->
-    <div id="pieChart"></div>
+    <!-- <div id="pieChart"></div> -->
     
   </div>
 
 
 
-
+ <!-- Shake Code -->
+ <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <!-- Bootstrap -->
 
@@ -185,19 +181,16 @@
   <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
 
-  <!-- Shake Code -->
-  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
 
-  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <!-- Our JS -->
+  
   <!-- API key -->
   <script type="text/javascript" src="config.js"></script>
+  <!-- Our JS -->
   <script type="text/javascript" src="logic.js"></script>
   <script type="text/javascript" src="barChart.js"></script>
-  <script type="text/javascript" src="pieChart.js"></script>
+  <!-- <script type="text/javascript" src="pieChart.js"></script> -->
   <script src="static/js/shake.js"></script>
 
 </body>

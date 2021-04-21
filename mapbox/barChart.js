@@ -56,15 +56,15 @@ var myChart = new Chart(ctx1, {
         }
     }
 })
-var ctx2 = document.getElementById('myPieChart');
-var myChart2 = new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-        datasets: [{
-            data: [10, 20, 30]
-        }]
-}
-})
+// var ctx2 = document.getElementById('myPieChart');
+// var myChart2 = new Chart(ctx2, {
+//     type: 'doughnut',
+//     data: {
+//         datasets: [{
+//             data: [10, 20, 30]
+//         }]
+// }
+// })
 
 })
 

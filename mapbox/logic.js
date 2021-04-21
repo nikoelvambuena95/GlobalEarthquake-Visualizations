@@ -50,7 +50,7 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
           // var depth2= (Math.round(depth*100)/100)
           // d3.select("#depth").text(`${depth2}`)
           // d3.select("#form").text(`${waveForm.toUpperCase()}`)
-          // $( "#map" ).effect( "shake" )
+          $( "#map" ).effect( "shake" )
         }))
         
     }
