@@ -29,27 +29,27 @@ var pie = new d3pie("pieChart", {
 			{
 				"label": "ml",
 				"value": 7440,
-				"color": "#2484c1"
+				"color": "#DAF7A6"
 			},
 			{
 				"label": "mb",
 				"value": 1099,
-				"color": "#0c6197"
+				"color": "#FFC300"
 			},
 			{
 				"label": "md",
 				"value": 2038,
-				"color": "#4daa4b"
+				"color": "#FF5733"
 			},
 			{
 				"label": "mww",
 				"value": 89,
-				"color": "#90c469"
+				"color": "#C70039"
 			},
 			{
 				"label": "mb_lg",
 				"value": 58,
-				"color": "#daca61"
+				"color": "#900C3F"
 			},
 			{
 				"label": "other",

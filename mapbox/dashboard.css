@@ -93,6 +93,16 @@ li:hover{
   cursor:pointer;
 }
 
+.bar-chart-box{
+  margin: 3%;
+  padding: 1%;
+  font-family: 'DM Serif Text';
+  /* font-size: 5px; */
+  text-align: center;
+  background-color: #faee69;
+  cursor:pointer;
+}
+
 .continent-title-box{
   margin: 3%;
   padding: 1%;

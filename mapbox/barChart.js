@@ -55,18 +55,52 @@ var myChart = new Chart(ctx1, {
             }
         }
     }
+})})
+
+d3.csv("Seismic_Data.csv").then(function(data){
+    var waveForm=["ml","md", "mb", "mmw", "mb_lg"]
+    var mLCount=0
+    var mdCount=0
+    var mbCount=0
+    var mmwCount=0
+    var mbLgCount=0
+    var otherCount=0
+    var counts=[]
+    for (var i=0;i<data.length;i++){
+        if(data[i].Waveform==="ml"){
+            mLCount+=1
+        }else if(data[i].Waveform==="md"){
+            mdCount+=1
+        }else if(data[i].Waveform==="mb"){
+            mbCount+=1
+        }else if(data[i].Waveform==="mmw"){
+            mmwCount+=1
+        }else if(data[i].Waveform==="mb_lg"){
+            mbLgCount+=1
+        }else{
+            otherCount+=1
+        }
+        
+        
+}counts.push(mLCount, mdCount, mbCount, mmwCount, mbLgCount, otherCount)
+console.log(counts)
+
+var ctx2 = document.getElementById('myPieChart');
+var myChart2 = new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        labels:waveForm,
+        datasets: [{
+            data: counts,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)']
+        }]
+}
 })
-// var ctx2 = document.getElementById('myPieChart');
-// var myChart2 = new Chart(ctx2, {
-//     type: 'doughnut',
-//     data: {
-//         datasets: [{
-//             data: [10, 20, 30]
-//         }]
-// }
-// })
+
 
 })
-
 
 
