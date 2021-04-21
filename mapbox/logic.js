@@ -25,11 +25,13 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
     var longitude=eqdata[i].Longitude
     var depth=eqdata[i].Depth
     var magnitude=eqdata[i].Magnitude
-    var waveform=eqdata[i].Waveform
+    var waveForm=eqdata[i].Waveform
     var place=eqdata[i].Place
     var time=eqdata[i].Time
     var type=eqdata[i].Type
     
+    // console.log(Math.round(depth*100)/100)
+
     
 
     // Set the data location property to a variable
@@ -42,15 +44,13 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([latitude, longitude])
-        .bindPopup(`<h3>${place}</h3><hr><p>${time}</p>`)
+        .bindPopup(`<h4>${place}</h4><hr><p>${time}</p>`)
         .on("click", function(){
-        console.log(magnitude)
-        d3.select("#magnitude").text(`${magnitude}`)
-          var depth2= Math.round(depth*100)/100
-          d3.select("#depth").text(`${depth}`)
-          var waveForm=waveform
-          d3.select("#form").text(`${waveForm.toUpperCase()}`)
-          $( "#map" ).effect( "shake" )
+          // d3.select("#magnitude").text(`${magnitude}`)
+          // var depth2= (Math.round(depth*100)/100)
+          // d3.select("#depth").text(`${depth2}`)
+          // d3.select("#form").text(`${waveForm.toUpperCase()}`)
+          // $( "#map" ).effect( "shake" )
         }))
         
     }
@@ -86,5 +86,5 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
 
   // Add our marker cluster layer to the map
   myMap.addLayer(markers);
-
+  
 });
