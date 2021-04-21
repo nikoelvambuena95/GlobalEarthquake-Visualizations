@@ -58,7 +58,7 @@ var myChart = new Chart(ctx1, {
 })})
 
 d3.csv("Seismic_Data.csv").then(function(data){
-    var waveForm=["ml","md", "mb", "mmw", "mb_lg"]
+    var waveForm=["ML","MD", "MD", "MMW", "MB_LG", "Other"]
     var mLCount=0
     var mdCount=0
     var mbCount=0
@@ -93,9 +93,14 @@ var myChart2 = new Chart(ctx2, {
         datasets: [{
             data: counts,
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)']
+                '#40E0D0',
+                '#DAF7A6',
+                '#FFC300',
+                '#FF5733',
+                '#F8C471',
+                '#F7DC6F'
+            ],
+            hoverOffset:5
         }]
 }
 })
