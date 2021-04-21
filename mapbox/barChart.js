@@ -53,7 +53,8 @@ var myChart = new Chart(ctx1, {
             y: {
                 beginAtZero: true
             }
-        }
+        },
+        maintainAspectRatio: true
     }
 })})
 
@@ -86,6 +87,7 @@ d3.csv("Seismic_Data.csv").then(function(data){
 console.log(counts)
 
 var ctx2 = document.getElementById('myPieChart');
+
 var myChart2 = new Chart(ctx2, {
     type: 'doughnut',
     data: {
@@ -102,6 +104,15 @@ var myChart2 = new Chart(ctx2, {
             ],
             hoverOffset:5
         }]
+},options: {
+    plugins:{
+        title:{
+            display:false,
+            text:"Wave Form by Percentage"
+        }
+    },
+    
+    maintainAspectRatio: false
 }
 })
 
