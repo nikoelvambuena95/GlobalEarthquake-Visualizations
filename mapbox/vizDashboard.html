@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Quake the Shake</title>
-  
+
   <!-- Boostrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -98,7 +98,7 @@
 
       </div>
     </div>
-    <div id="metrics-row" class="row">
+    <!-- <div id="metrics-row" class="row">
       <div class="col-md-2">
         <div class="row">
           <h1 id="magnitude" class="center left-padding">9.5</h1>
@@ -132,6 +132,14 @@
         </div>
       </div>
 
+    </div> -->
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+      <div class="col-md-6">
+      <div id="pieChart"></div>
+    </div>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -147,15 +155,18 @@
     <!-- <div">
       <canvas id="myPieChart" width="20" height="10"></canvas>
     </div> -->
-    <!-- <div id="pieChart"></div> -->
+
     
+
+
+
   </div>
 
 
 
- <!-- Shake Code -->
- <script src="//code.jquery.com/jquery-1.12.4.js"></script>
- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Shake Code -->
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <!-- Bootstrap -->
 
@@ -163,9 +174,11 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
 
   <!--D3 cdn-->
   <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <!-- Chart.js Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js"
     integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw=="
@@ -173,18 +186,20 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-  crossorigin=""></script>
- 
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
 
   <!-- Marker Cluster JS -->
-  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <script type="text/javascript"
+    src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+  <script type="text/javascript" src="d3pie.js"></script>
+  <script type="text/javascript" src="pieChart.js"></script>
 
 
- 
 
 
-  
   <!-- API key -->
   <script type="text/javascript" src="config.js"></script>
   <!-- Our JS -->
