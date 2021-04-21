@@ -103,6 +103,17 @@ li:hover{
   cursor:pointer;
 }
 
+.pie-chart-box{
+  margin: 3%;
+  padding: 1%;
+  font-family: 'DM Serif Text';
+  /* font-size: 5px; */
+  text-align: center;
+  background-color: #ffb050;
+  cursor:pointer;
+}
+
+
 .continent-title-box{
   margin: 3%;
   padding: 1%;
