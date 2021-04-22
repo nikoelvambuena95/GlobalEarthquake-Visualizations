@@ -43,12 +43,14 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel="stylesheet" type="text/css" href="wildstyle.css">
 
 </head>
 
 <body>
+
   <!-- The div where we will inject our map -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <h1 id="main-header">Quake Locator</h1>
@@ -86,11 +88,7 @@
           <li id="africa">Africa</li> -->
         <!-- <li id="antarctica">Antarctica</li> -->
         <!-- <li id="oceania">Oceania</li> -->
-        <br>
-        <br>
-        <br>
-
-
+      
       </div>
       <div class="col-md-9">
         <!-- <div id="toggle"></div> -->
@@ -143,6 +141,7 @@
     </div> -->
    <div class="row">
      <div class="col-md-6">
+      <h4 class="center pie-chart-box">Magnitude, Population and Disaster Relief Funds</h4>
      </div>
      <div class="col-md-6">
      <h4 class="center pie-chart-box">Percentage of Wave Form</h4>
@@ -151,10 +150,11 @@
 
     <div class="row">
       <div class="col-md-6">
+        <div class="chart"></div>
       </div>
       
       <div class="col-md-6">
-        <canvas id="myPieChart" width="300" height="300"></canvas>
+        <canvas id="myPieChart" width="200" height="200"></canvas>
 
       </div>
     </div>
@@ -167,13 +167,12 @@
       </div>
     </div>
 
-    <div><canvas id="myChart" width="200" height="100"></canvas></div>
+    <div><canvas id="myChart" width="500" height="300"></canvas></div>
 
     <!-- <div">
       <canvas id="myPieChart" width="20" height="10"></canvas>
     </div> -->
-    <div class="chart">
-		</div>
+    
 
 
 

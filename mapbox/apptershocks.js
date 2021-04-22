@@ -1,7 +1,7 @@
 // Bubble Chart for US Aid, Earthquake Magnitude, and Population
 
-var svgWidth = 1100;
-var svgHeight = 700;
+var svgWidth = 900;
+var svgHeight = 400;
 
 var margin = {
   top: 40,

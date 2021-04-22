@@ -54,7 +54,7 @@ var myChart = new Chart(ctx1, {
                 beginAtZero: true
             }
         },
-        maintainAspectRatio: true
+        maintainAspectRatio: false
     }
 })})
 
