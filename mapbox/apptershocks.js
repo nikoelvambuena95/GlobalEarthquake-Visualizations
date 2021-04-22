@@ -135,7 +135,7 @@ d3.csv("quakers2shakers.csv").then(function(quakers2shakers, err) {
     .append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d.aid_usd_mil))
-    .attr("r", 20)
+    .attr("r", 15)
     .attr("fill", "red")
     .attr("opacity", ".5");
 
