@@ -46,20 +46,17 @@ d3.csv("Seismic_Data.csv").then(function(eqdata){
     // if (location) {
 
       // Add a new marker to the cluster group and bind a pop-up
-      markers.addLayer((L.marker([latitude, longitude]))
+      markers.addLayer((L.marker([latitude, longitude])
         .bindPopup(`<h4>${place}</h4><hr><p>Depth: ${Math.round(depth*100)/100}ft WaveForm: ${waveForm.toUpperCase()}</p>`)
-        
-      )
-      
-    //   markers.on("clusterclick", function(){
-    //     d3.select("#magnitude").text(`${magnitude}`)
-    //     var depth2= (Math.round(depth*100)/100)
-    //     d3.select("#depth").text(`${depth2}`)
-    //     d3.select("#form").text(`${waveForm.toUpperCase()}`)
-    //     $( "#map" ).effect( "shake" )
+        .on("click", function(){
+        // d3.select("#magnitude").text(`${magnitude}`)
+        // var depth2= (Math.round(depth*100)/100)
+        // d3.select("#depth").text(`${depth2}`)
+        // d3.select("#form").text(`${waveForm.toUpperCase()}`)
+        $( "#map" ).effect( "shake" )
       
  
-    // })
+    })))
         
     }
     d3.selectAll("#europe").on("click", function(){
