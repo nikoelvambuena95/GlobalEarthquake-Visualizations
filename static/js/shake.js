@@ -4,9 +4,9 @@ listItem.on("click", function() {
   $( "#map" ).effect( "shake" );
 })
 
-// $( document ).click(function() {
-//     $( "#map" ).effect( "shake" );
-//   });
+$( document ).click(function() {
+    $( "#map" ).effect( "shake" );
+  });
 
 
 

@@ -46,30 +46,14 @@ d3.json("/api/v1.0/earthquake_data").then(function(eqdata){
     // if (location) {
 
       // Add a new marker to the cluster group and bind a pop-up
-<<<<<<< HEAD:static/js/logic.js
-      markers.addLayer((L.marker([latitude, longitude]))
-        .bindPopup(`<h4>${place}</h4><hr><p>Depth: ${Math.round(depth*100)/100}</p> <p>WaveForm: ${waveForm}</p>`)
-        
-      )
-
-      // ft WaveForm: ${waveForm.toUpperCase()}
-      
-    //   markers.on("clusterclick", function(){
-    //     d3.select("#magnitude").text(`${magnitude}`)
-    //     var depth2= (Math.round(depth*100)/100)
-    //     d3.select("#depth").text(`${depth2}`)
-    //     d3.select("#form").text(`${waveForm.toUpperCase()}`)
-    //     $( "#map" ).effect( "shake" )
-=======
       markers.addLayer((L.marker([latitude, longitude])
-        .bindPopup(`<h4>${place}</h4><hr><p>Depth: ${Math.round(depth*100)/100}ft WaveForm: ${waveForm.toUpperCase()}</p>`)
+        .bindPopup(`<h4>${place}</h4><hr><p>Depth: ${Math.round(depth*100)/100}<br>WaveForm: ${waveForm}</p>`)
         .on("click", function(){
-        // d3.select("#magnitude").text(`${magnitude}`)
-        // var depth2= (Math.round(depth*100)/100)
-        // d3.select("#depth").text(`${depth2}`)
-        // d3.select("#form").text(`${waveForm.toUpperCase()}`)
+        d3.select("#magnitude").text(`${magnitude}`)
+        var depth2= (Math.round(depth*100)/100)
+        d3.select("#depth").text(`${depth2}`)
+        d3.select("#form").text(`${waveForm}`)
         $( "#map" ).effect( "shake" )
->>>>>>> f88f7f512d9da57d295c79be89ab970a31073e67:mapbox/logic.js
       
  
     })))
