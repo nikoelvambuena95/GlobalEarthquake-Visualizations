@@ -1,6 +1,6 @@
 // Bubble Chart for US Aid, Earthquake Magnitude, and Population
 
-var svgWidth = 900;
+var svgWidth = 600;
 var svgHeight = 400;
 
 var margin = {
@@ -96,7 +96,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
 }
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("quakers2shakers.csv").then(function(quakers2shakers, err) {
+d3.json("/api/v1.0/quaker_data").then(function(quakers2shakers, err) {
   if (err) throw err;
 
   // parse data
@@ -216,4 +216,3 @@ d3.csv("quakers2shakers.csv").then(function(quakers2shakers, err) {
 }).catch(function(error) {
   console.log(error);
 });
-
