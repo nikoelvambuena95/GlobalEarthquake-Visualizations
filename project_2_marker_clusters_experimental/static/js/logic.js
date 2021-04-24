@@ -22,7 +22,6 @@ d3.csv("static/js/Seismic_Data.csv").then(function(eqdata){
 
   // Create a new marker cluster group
   var markers = L.markerClusterGroup();
-  var url = "https://ripetimes.press"
   // Loop through data
   for (var i = 0; i < eqdata.length; i++) {
 

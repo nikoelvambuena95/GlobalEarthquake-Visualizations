@@ -7,4 +7,3 @@ All main files are stored in the mapbox folder:
 -barChart.js = Javascript for bar chart and pie chart  
 -apptershocks.js = Javascript for bubble chart  
 -dashboard.css = css for dashboard  
--wildstyle.css = css for bubble chart  
