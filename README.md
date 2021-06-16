@@ -1,4 +1,4 @@
-# GlobalEarthquake - Visualizations & Dashboard
+# Global Earthquakes - Visualizations & Dashboard
 
 Table of Contents:  
 All main files are stored in the mapbox folder:
